@@ -40,11 +40,15 @@ const relayPager = (data, options) => {
             if(orgIndex !== 0) {
                 previous = data[orgIndex - 1] 
             }
-            return {
-                node: e,
-                next,
-                previous
+
+            let edge = { node: e}
+            if(next) {
+                edge.next = next
             }
+            if(previous) {
+                edge.previous = previous
+            }
+            return edge
         })
     } else {
         edges = edges.map(e => {return {node: e}})
