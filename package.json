@@ -1,0 +1,32 @@
+{
+  "name": "super-relay",
+  "version": "0.0.1",
+  "description": "Helper functions for creating Relay style connections in GraphQL resolvers from plain arrays",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "nyc mocha",
+    "ci-test-report": "mocha test --reporter mocha-junit-reporter --reporter-options mochaFile=./test_results/junit/results.xml",
+    "ci-coverage-report": "nyc report --reporter=text-lcov > coverage.lcov",
+    "codecov": "codecov"
+  },
+  "keywords": [
+    "graphql",
+    "relay"
+  ],
+  "author": "John Clarke <themagoo@hotmail.co.uk>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheMagoo73/super-relay"
+  },
+  "website": "https://medium.com/@johnclarke_82232",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "codecov": "^3.6.5",
+    "coveralls": "^3.0.11",
+    "mocha": "^7.1.1",
+    "mocha-junit-reporter": "^1.23.3",
+    "nyc": "^15.0.0"
+  }
+}

@@ -1,0 +1,4 @@
+node_modules
+.nyc_outout
+test_results
+coverage.lcov
