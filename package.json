@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "coverage": "nyc mocha",
-    "ci-test-report": "mocha test --reporter mocha-junit-reporter --reporter-options mochaFile=./test_results/junit/results.xml",
+    "ci-test-report": "nyc mocha test --reporter mocha-junit-reporter --reporter-options mochaFile=./test_results/junit/results.xml",
     "ci-coverage-report": "nyc report --reporter=text-lcov > coverage.lcov",
     "codecov": "codecov"
   },
