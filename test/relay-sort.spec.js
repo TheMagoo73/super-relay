@@ -87,7 +87,7 @@ describe('relaySort', () => {
         it(c.case, () => {
 
             const result = relaySort(testData, {sort: c.spec.sort})
-            
+
             result.should.deep.equal(c.expectedResult)
         })
 

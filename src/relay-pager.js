@@ -1,3 +1,20 @@
+/**
+ * @typedef {object} Edges
+ * @property {object} data the paged array as Relay-esque edges
+ * @property {object} pageInfo information on additional page availability 
+ */
+
+/**
+ * Builds Relay-esque Edges from an array of data. N.B does not support cursors
+ * @method
+ * @param {array} data - the array to be paged
+ * @param {object} [options] - controls how the data is paged
+ * @param {number} [options.skip=0] - elements to skip before taking
+ * @param {number} [options.limit] - elements to take for the page, defaults to all remaining elements
+ * @param {function} [options.mapper] - a function taking a single data element, and returning it mapped to a node
+ * @param {boolean} [options.addPaging] - adds previous and next nodes to the returned edges
+ * @returns {Edges} the paged data as Relay-eque edges, and page info 
+ */
 const relayPager = (data, options) => {
     const {skip, limit} = options
     let startSlice = 0

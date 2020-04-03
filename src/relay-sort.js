@@ -10,6 +10,17 @@ const createSorter = (field, order) => {
     }
 }
 
+/**
+ * Sort an array based on the specification object. Default sort order is always ascending
+ * @method
+ * @param {array} data - the array to be sorted
+ * @param {object} options - controls how the data is sorted
+ * @param {object} options.sort - the sort specification
+ * @param {string|string[]} options.sort.fields - the field, or fields by which to sort, in order of priority
+ * @param {string[]} options.sort.order - an array of strings, one per field, specifying the sort order, ASC or DESC
+ * @returns {array} The sorted array
+ * @throws {error} When not enough sort orders are provided
+ */
 const relaySort = (data, options) => {
 
     let {fields, order} = options.sort
